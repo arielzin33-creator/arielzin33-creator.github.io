@@ -1,0 +1,307 @@
+/* ==========================================================================
+   PORTFOLIO TEMPLATE — animations.css
+   Every moving part of the page. No JavaScript is involved anywhere.
+
+   Two techniques do the heavy lifting:
+   1. Plain @keyframes for looping decoration (blobs, marquee, ring, caret).
+   2. Scroll-driven animations (`animation-timeline: view()`) for the
+      reveal-on-scroll effects. These are wrapped in @supports so browsers
+      without them simply show the content — never a blank page.
+
+   The whole file is disabled under `prefers-reduced-motion: reduce`.
+   ========================================================================== */
+
+
+/* ==========================================================================
+   01. KEYFRAMES
+   ========================================================================== */
+
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(34px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes fade-right {
+  from { opacity: 0; transform: translateX(-30px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes zoom-in {
+  from { opacity: 0; transform: scale(0.9); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
+  33%      { transform: translate3d(3%, -4%, 0) scale(1.06); }
+  66%      { transform: translate3d(-3%, 3%, 0) scale(0.96); }
+}
+
+@keyframes bob {
+  0%, 100% { transform: translate(-50%, 0); }
+  50%      { transform: translate(-50%, -10px); }
+}
+
+@keyframes shimmer {
+  to { background-position: 220% 0; }
+}
+
+@keyframes blink {
+  0%, 45%   { opacity: 1; }
+  50%, 95%  { opacity: 0; }
+  100%      { opacity: 1; }
+}
+
+@keyframes pulse-ring {
+  0%   { box-shadow: 0 0 0 0 rgba(52, 211, 153, 0.6); }
+  70%  { box-shadow: 0 0 0 9px rgba(52, 211, 153, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(52, 211, 153, 0); }
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+@keyframes shine {
+  from { transform: translateX(-110%); }
+  to   { transform: translateX(110%); }
+}
+
+@keyframes wheel {
+  0%   { opacity: 0; transform: translateY(-4px); }
+  35%  { opacity: 1; }
+  100% { opacity: 0; transform: translateY(12px); }
+}
+
+@keyframes grow-y {
+  from { transform: scaleY(0); }
+  to   { transform: scaleY(1); }
+}
+
+@keyframes grow-x {
+  from { width: 0; }
+  to   { width: var(--level); }
+}
+
+/* Rotating job titles: hold on each line, then slide to the next.
+   Five <li> (last duplicates the first) = four visible steps. */
+@keyframes roll {
+  0%,   18%  { transform: translateY(0); }
+  25%,  43%  { transform: translateY(-1.55em); }
+  50%,  68%  { transform: translateY(-3.1em); }
+  75%,  93%  { transform: translateY(-4.65em); }
+  100%       { transform: translateY(-6.2em); }
+}
+
+
+/* ==========================================================================
+   02. HERO — entrance on page load
+   Staggered so the eye lands on the name first.
+   ========================================================================== */
+
+.hero__text > .reveal,
+.hero__photo.reveal {
+  animation: fade-up 0.85s var(--ease) both;
+}
+
+.hero__text > .reveal:nth-child(1) { animation-delay: 0.05s; }
+.hero__text > .reveal:nth-child(2) { animation-delay: 0.15s; }
+.hero__text > .reveal:nth-child(3) { animation-delay: 0.25s; }
+.hero__text > .reveal:nth-child(4) { animation-delay: 0.35s; }
+.hero__text > .reveal:nth-child(5) { animation-delay: 0.45s; }
+.hero__text > .reveal:nth-child(6) { animation-delay: 0.55s; }
+.hero__photo.reveal {
+  animation-name: zoom-in;
+  animation-delay: 0.2s;
+  animation-duration: 1s;
+}
+
+
+/* ==========================================================================
+   03. LOOPING DECORATION
+   ========================================================================== */
+
+/* Background blobs drift slowly behind the hero */
+.blob--1 { animation: float 19s ease-in-out infinite; }
+.blob--2 { animation: float 24s ease-in-out infinite reverse; }
+
+/* Gradient headline shimmer */
+.gradient-text { animation: shimmer 7s linear infinite alternate; }
+
+/* "Available for work" dot */
+.status-dot { animation: pulse-ring 2.4s ease-out infinite; }
+
+/* Rotating conic ring around the profile picture */
+.avatar__ring { animation: spin 9s linear infinite; }
+
+/* Floating badge under the avatar */
+.badge--float { animation: bob 4.5s ease-in-out infinite; }
+
+/* Job-title roller + blinking caret */
+.roles__list { animation: roll 11s var(--ease) infinite; }
+.caret       { animation: blink 1.05s steps(1) infinite; }
+
+/* Scroll-hint mouse wheel */
+.scroll-hint__mouse::after { animation: wheel 1.8s ease-in-out infinite; }
+
+/* Endless tech marquee (track holds two identical halves) */
+.marquee__track { animation: marquee 34s linear infinite; }
+.marquee:hover .marquee__track { animation-play-state: paused; }
+
+
+/* ==========================================================================
+   04. SCROLL-DRIVEN REVEALS
+   Progressive enhancement: without `animation-timeline` support the
+   @supports block never applies, so nothing is ever hidden.
+   ========================================================================== */
+
+@supports (animation-timeline: view()) {
+
+  /* --- generic reveal for everything below the hero --- */
+  .section .reveal,
+  .footer .reveal {
+    animation: fade-up linear both;
+    animation-timeline: view();
+    animation-range: entry 0% cover 26%;
+  }
+
+  /* --- section headers get a slightly longer runway --- */
+  .section__head.reveal {
+    animation-range: entry 0% cover 22%;
+  }
+
+  /* --- stat cards fan in one after another --- */
+  .fact.reveal:nth-child(1) { animation-range: entry 0%  cover 22%; }
+  .fact.reveal:nth-child(2) { animation-range: entry 0%  cover 26%; }
+  .fact.reveal:nth-child(3) { animation-range: entry 0%  cover 30%; }
+  .fact.reveal:nth-child(4) { animation-range: entry 0%  cover 34%; }
+
+  /* --- skill bars fill as they scroll into view --- */
+  .bar__fill {
+    animation: grow-x linear both;
+    animation-timeline: view();
+    animation-range: entry 25% cover 42%;
+  }
+
+  /* --- timeline rail draws itself downward --- */
+  .timeline::before {
+    animation: grow-y linear both;
+    animation-timeline: view();
+    animation-range: entry 20% cover 70%;
+  }
+
+  /* --- timeline cards slide in from the left --- */
+  .timeline__item.reveal {
+    animation-name: fade-right;
+  }
+
+  /* --- project cards stagger by column --- */
+  .card.reveal:nth-child(1) { animation-range: entry 0% cover 24%; }
+  .card.reveal:nth-child(2) { animation-range: entry 0% cover 30%; }
+  .card.reveal:nth-child(3) { animation-range: entry 0% cover 36%; }
+
+  /* --- skill group cards --- */
+  .skill-group.reveal:nth-child(1) { animation-range: entry 0% cover 24%; }
+  .skill-group.reveal:nth-child(2) { animation-range: entry 0% cover 28%; }
+  .skill-group.reveal:nth-child(3) { animation-range: entry 0% cover 32%; }
+  .skill-group.reveal:nth-child(4) { animation-range: entry 0% cover 36%; }
+
+  /* --- live stat cards fan in --- */
+  .stat-card.reveal:nth-child(1) { animation-range: entry 0% cover 24%; }
+  .stat-card.reveal:nth-child(2) { animation-range: entry 0% cover 29%; }
+  .stat-card.reveal:nth-child(3) { animation-range: entry 0% cover 34%; }
+  .stat-card.reveal:nth-child(4) { animation-range: entry 0% cover 39%; }
+}
+
+
+/* ==========================================================================
+   04b. ACCORDIONS
+   <details> can't transition its own height, so the *content* animates in
+   each time the panel is opened. Cheap, and it reads as a real expansion.
+   ========================================================================== */
+
+.acc[open] > .acc__body { animation: fade-up 0.42s var(--ease) both; }
+
+/* Badge walls cascade in behind the panel */
+.acc[open] .badges img { animation: zoom-in 0.35s var(--ease) both; }
+.acc[open] .badges img:nth-child(4n+1) { animation-delay: 0.02s; }
+.acc[open] .badges img:nth-child(4n+2) { animation-delay: 0.06s; }
+.acc[open] .badges img:nth-child(4n+3) { animation-delay: 0.10s; }
+.acc[open] .badges img:nth-child(4n+4) { animation-delay: 0.14s; }
+
+.acc[open] .handle:nth-child(1) { animation: fade-up 0.4s 0.04s var(--ease) both; }
+.acc[open] .handle:nth-child(2) { animation: fade-up 0.4s 0.10s var(--ease) both; }
+.acc[open] .handle:nth-child(3) { animation: fade-up 0.4s 0.16s var(--ease) both; }
+.acc[open] .handle:nth-child(4) { animation: fade-up 0.4s 0.22s var(--ease) both; }
+
+.acc[open] .activity li:nth-child(1) { animation: fade-right 0.4s 0.06s var(--ease) both; }
+.acc[open] .activity li:nth-child(2) { animation: fade-right 0.4s 0.12s var(--ease) both; }
+.acc[open] .activity li:nth-child(3) { animation: fade-right 0.4s 0.18s var(--ease) both; }
+.acc[open] .activity li:nth-child(4) { animation: fade-right 0.4s 0.24s var(--ease) both; }
+
+
+/* ==========================================================================
+   05. MODAL CONTENT ENTRANCE
+   Runs when the modal becomes the :target.
+   ========================================================================== */
+
+.modal:target .modal__head   { animation: fade-up 0.5s 0.12s var(--ease) both; }
+.modal:target .modal__hero   { animation: fade-in 0.6s 0.18s var(--ease) both; }
+.modal:target .qa:nth-child(1) { animation: fade-up 0.45s 0.22s var(--ease) both; }
+.modal:target .qa:nth-child(2) { animation: fade-up 0.45s 0.30s var(--ease) both; }
+.modal:target .qa:nth-child(3) { animation: fade-up 0.45s 0.38s var(--ease) both; }
+.modal:target .qa:nth-child(4) { animation: fade-up 0.45s 0.46s var(--ease) both; }
+.modal:target .shots         { animation: fade-up 0.5s 0.5s var(--ease) both; }
+.modal:target .modal__foot   { animation: fade-up 0.5s 0.56s var(--ease) both; }
+
+
+/* ==========================================================================
+   06. REDUCED MOTION
+   One switch that turns the whole show off for people who ask for it.
+   ========================================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    animation-delay: 0ms !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  html { scroll-behavior: auto; }
+
+  /* Make sure the scroll-driven rules can't leave anything invisible */
+  .reveal,
+  .modal:target .modal__head,
+  .modal:target .modal__hero,
+  .modal:target .qa,
+  .modal:target .shots,
+  .modal:target .modal__foot,
+  .acc[open] > .acc__body,
+  .acc[open] .badges img,
+  .acc[open] .handle,
+  .acc[open] .activity li {
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
+  }
+
+  .bar__fill   { width: var(--level) !important; animation: none !important; }
+  .timeline::before { transform: none !important; animation: none !important; }
+  .roles__list { animation: none !important; }
+  .roles       { height: auto; }
+  .roles__list li:not(:first-child) { display: none; }
+}

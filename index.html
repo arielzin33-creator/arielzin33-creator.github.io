@@ -1,0 +1,1181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Ariel Zinger — Junior Full-Stack Developer</title>
+  <meta name="description" content="Portfolio of Ariel Zinger, a junior full-stack developer with an AI-assisted development bootcamp background and a decade of R&D leadership before the switch.">
+  <meta name="author" content="Ariel Zinger">
+
+  <!-- Open Graph (how the link looks when shared) -->
+  <meta property="og:title" content="Ariel Zinger — Junior Full-Stack Developer">
+  <meta property="og:description" content="App developer and AI builder, crafting intelligent tools that turn ideas into working products.">
+  <meta property="og:image" content="assets/profile-photo.png">
+  <meta property="og:type" content="website">
+
+  <!-- Favicon set: SVG for modern browsers, PNG sizes + ICO for everyone else -->
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon-192.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon-180.png">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+
+<body>
+
+  <!--
+    ==========================================================================
+    CSS-ONLY STATE TOGGLES
+    These two checkboxes live at the top of <body> so the rest of the page can
+    react to them with :has(). No JavaScript anywhere in this template.
+    ==========================================================================
+  -->
+  <input type="checkbox" id="theme-toggle" class="state-input">
+  <input type="checkbox" id="nav-toggle" class="state-input">
+
+  <a href="#main" class="skip-link">Skip to content</a>
+
+  <!-- ======================= NAVBAR ======================= -->
+  <header class="nav">
+    <div class="container nav__inner">
+      <a href="#hero" class="nav__logo">
+        <span class="nav__logo-mark">&lt;/&gt;</span>
+        <span class="nav__logo-text">arielzinger</span>
+      </a>
+
+      <nav class="nav__links" aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#skills">Tech stack</a>
+        <a href="#resume">Resume</a>
+        <a href="#projects">Projects</a>
+        <a href="#stats">Stats</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="nav__actions">
+        <!-- Theme switch: label controls #theme-toggle above -->
+        <label for="theme-toggle" class="theme-switch" title="Toggle light / dark theme">
+          <span class="theme-switch__track">
+            <span class="theme-switch__thumb"></span>
+          </span>
+          <span class="sr-only">Toggle colour theme</span>
+        </label>
+
+        <!-- Hamburger: label controls #nav-toggle above -->
+        <label for="nav-toggle" class="burger" title="Menu">
+          <span></span><span></span><span></span>
+          <span class="sr-only">Open menu</span>
+        </label>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile drawer (opened by #nav-toggle) -->
+  <nav class="drawer" aria-label="Mobile navigation">
+    <a href="#about">About</a>
+    <a href="#skills">Tech stack</a>
+    <a href="#resume">Resume</a>
+    <a href="#projects">Projects</a>
+    <a href="#stats">Stats</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <main id="main">
+
+    <!-- ======================= HERO ======================= -->
+    <section id="hero" class="hero">
+      <!-- Decorative animated background blobs -->
+      <div class="blob blob--1" aria-hidden="true"></div>
+      <div class="blob blob--2" aria-hidden="true"></div>
+      <div class="grid-overlay" aria-hidden="true"></div>
+
+      <div class="container hero__inner">
+
+        <div class="hero__text">
+          <p class="hero__eyebrow reveal">
+            <span class="status-dot"></span>
+            Available for junior full-stack roles
+          </p>
+
+          <h1 class="hero__title reveal">
+            Hi, I'm <span class="gradient-text">Ariel Zinger</span>
+          </h1>
+
+          <!-- Rotating job titles — pure CSS vertical slider -->
+          <div class="hero__roles reveal">
+            <span class="hero__roles-static">I build</span>
+            <span class="roles">
+              <ul class="roles__list">
+                <li>full-stack apps</li>
+                <li>AI-assisted tools</li>
+                <li>agentic workflows</li>
+                <li>spec-to-code pipelines</li>
+                <li>full-stack apps</li><!-- duplicate of first for a seamless loop -->
+              </ul>
+            </span>
+            <span class="caret" aria-hidden="true"></span>
+          </div>
+
+          <p class="hero__bio reveal">
+            Junior developer completing an intensive Full-Stack &amp; AI Development
+            Bootcamp, with hands-on experience across Python, JavaScript/TypeScript,
+            React, Node.js/Express, PostgreSQL, and agentic AI tooling like LangChain,
+            LangGraph and MCP. I bring over a decade of prior R&amp;D leadership to a
+            development team — structured problem-solving, fast learning, and
+            cross-functional collaboration, now aimed at
+            <strong>junior full-stack / AI-assisted developer roles</strong>.
+          </p>
+
+          <div class="hero__cta reveal">
+            <!-- EDIT: drop your PDF at assets/resume.pdf -->
+            <a class="btn btn--primary" href="assets/resume.pdf" download>
+              <svg viewBox="0 0 24 24" class="icon" aria-hidden="true">
+                <path d="M12 3v12m0 0 4-4m-4 4-4-4M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/>
+              </svg>
+              Download resume
+            </a>
+            <a class="btn btn--ghost" href="#projects">
+              View my work
+              <svg viewBox="0 0 24 24" class="icon" aria-hidden="true">
+                <path d="M5 12h14m0 0-5-5m5 5-5 5"/>
+              </svg>
+            </a>
+          </div>
+
+          <ul class="socials reveal">
+            <li>
+              <a href="https://github.com/arielzin33-creator" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                <svg viewBox="0 0 24 24" class="icon icon--fill" aria-hidden="true">
+                  <path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.6v-2c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.8-1.6-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.4 11.4 0 0 1 6 0C17.7 4.7 18.7 5 18.7 5c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.5-2.7 5.5-5.3 5.8.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.7 18.3.5 12 .5Z"/>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/in/ariel-zinger-1067936b/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                <svg viewBox="0 0 24 24" class="icon icon--fill" aria-hidden="true">
+                  <path d="M20.4 20.4h-3.5v-5.6c0-1.3 0-3-1.9-3s-2.1 1.4-2.1 2.9v5.7H9.4V9h3.4v1.6h.1a3.7 3.7 0 0 1 3.3-1.8c3.6 0 4.2 2.3 4.2 5.4v6.2ZM5.3 7.4a2 2 0 1 1 0-4.1 2 2 0 0 1 0 4.1ZM7.1 20.4H3.6V9h3.5v11.4ZM22.2 0H1.8C.8 0 0 .8 0 1.7v20.6c0 1 .8 1.7 1.8 1.7h20.4c1 0 1.8-.8 1.8-1.7V1.7c0-.9-.8-1.7-1.8-1.7Z"/>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="https://medium.com/@arielzin33" target="_blank" rel="noopener noreferrer" aria-label="Medium">
+                <svg viewBox="0 0 24 24" class="icon icon--fill" aria-hidden="true">
+                  <path d="M13.5 12c0 3.9-3.2 7.1-7.1 7.1S-.7 15.9-.7 12s3.2-7.1 7.1-7.1 7.1 3.2 7.1 7.1Zm7.8 0c0 3.7-1.6 6.6-3.5 6.6s-3.5-3-3.5-6.6 1.6-6.6 3.5-6.6 3.5 3 3.5 6.6Zm3.7 0c0 3.3-.6 5.9-1.2 5.9s-1.2-2.6-1.2-5.9.6-5.9 1.2-5.9 1.2 2.6 1.2 5.9Z" transform="translate(1 0)"/>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="mailto:arielzin33@gmail.com" aria-label="Email">
+                <svg viewBox="0 0 24 24" class="icon" aria-hidden="true">
+                  <path d="M3 7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7Z"/>
+                  <path d="m3.5 7.5 8.5 6 8.5-6"/>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Profile picture with animated conic ring -->
+        <div class="hero__photo reveal">
+          <div class="avatar">
+            <div class="avatar__ring" aria-hidden="true"></div>
+            <img src="assets/profile-photo.png" alt="Portrait of Ariel Zinger" width="320" height="320">
+          </div>
+          <div class="badge badge--float">
+            <span class="badge__emoji">🧪</span> ex-chemist, now shipping code
+          </div>
+        </div>
+      </div>
+
+      <a href="#about" class="scroll-hint" aria-label="Scroll to about section">
+        <span class="scroll-hint__mouse"></span>
+        <span class="scroll-hint__label">scroll</span>
+      </a>
+    </section>
+
+    <!-- ======================= ABOUT ======================= -->
+    <section id="about" class="section">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="section__kicker">01 — About</p>
+          <h2 class="section__title">A bit more about me</h2>
+        </header>
+
+        <div class="about">
+          <div class="about__text reveal">
+            <p>
+              I'm a versatile developer specialising in <strong>MERN-stack, and AI-agent
+              development</strong>, with a passion for continuous learning. My
+              expertise lies in integration, improving user interfaces, and enhancing
+              overall user experiences — plus practical experience directing
+              AI-assisted development tools (Base44, Claude Code) against clear
+              specifications, rather than accepting first-pass output.
+            </p>
+            <p>
+              Before retraining as a developer, I spent over a decade in R&amp;D
+              leadership roles across materials science, medical devices, and
+              consumer-product companies — managing multidisciplinary teams of 10+,
+              running projects from concept through pilot-scale production, and
+              coordinating cross-functionally with business, marketing and regulatory
+              teams. That background is where the structured problem-solving and
+              fast learning come from; the code is the new part.
+            </p>
+            <p>
+              Right now I'm completing an intensive Full-Stack &amp; AI Development
+              Bootcamp — weekly exercises, two hackathons, and a capstone project in
+              progress — while looking for a junior full-stack or AI-assisted
+              development role where I can keep shipping and keep learning.
+            </p>
+          </div>
+
+          <ul class="facts">
+            <!-- EDIT: these four facts are drawn straight from the resume -->
+            <li class="fact reveal">
+              <span class="fact__num">10+</span>
+              <span class="fact__label">years leading R&amp;D teams</span>
+            </li>
+            <li class="fact reveal">
+              <span class="fact__num">10+</span>
+              <span class="fact__label">team members managed</span>
+            </li>
+            <li class="fact reveal">
+              <span class="fact__num">2</span>
+              <span class="fact__label">bootcamp hackathons</span>
+            </li>
+            <li class="fact reveal">
+              <span class="fact__num">3</span>
+              <span class="fact__label">AI-assisted projects shipped</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= SKILLS ======================= -->
+    <section id="skills" class="section section--alt">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="section__kicker">02 — Skills</p>
+          <h2 class="section__title">What I work with</h2>
+          <p class="section__sub">
+            The bars are honest: filled means "I've shipped production code with it",
+            not "I watched a tutorial once".
+          </p>
+        </header>
+
+        <div class="skills">
+          <!-- ---- Column 1: proficiency bars ---- -->
+          <!-- EDIT: these are my own honest estimates after a 3-month bootcamp — adjust freely -->
+          <div class="skills__bars">
+            <div class="bar reveal" style="--level: 80%">
+              <div class="bar__top"><span>JavaScript / TypeScript</span><span class="bar__pct">80%</span></div>
+              <div class="bar__track"><div class="bar__fill"></div></div>
+            </div>
+            <div class="bar reveal" style="--level: 75%">
+              <div class="bar__top"><span>React &amp; Redux Toolkit</span><span class="bar__pct">75%</span></div>
+              <div class="bar__track"><div class="bar__fill"></div></div>
+            </div>
+            <div class="bar reveal" style="--level: 75%">
+              <div class="bar__top"><span>Node.js &amp; Express</span><span class="bar__pct">75%</span></div>
+              <div class="bar__track"><div class="bar__fill"></div></div>
+            </div>
+            <div class="bar reveal" style="--level: 70%">
+              <div class="bar__top"><span>Python</span><span class="bar__pct">70%</span></div>
+              <div class="bar__track"><div class="bar__fill"></div></div>
+            </div>
+            <div class="bar reveal" style="--level: 65%">
+              <div class="bar__top"><span>PostgreSQL &amp; Knex.js</span><span class="bar__pct">65%</span></div>
+              <div class="bar__track"><div class="bar__fill"></div></div>
+            </div>
+            <div class="bar reveal" style="--level: 65%">
+              <div class="bar__top"><span>LangChain / LangGraph / MCP</span><span class="bar__pct">65%</span></div>
+              <div class="bar__track"><div class="bar__fill"></div></div>
+            </div>
+          </div>
+
+          <!-- ---- Column 2: grouped chips, mirroring the resume's own categories ---- -->
+          <div class="skills__groups">
+            <div class="skill-group reveal">
+              <h3>Languages</h3>
+              <ul class="chips">
+                <li>Python</li><li>JavaScript</li>
+                <li>TypeScript</li><li>SQL</li>
+              </ul>
+            </div>
+            <div class="skill-group reveal">
+              <h3>Frontend</h3>
+              <ul class="chips">
+                <li>React</li><li>Redux Toolkit</li><li>HTML5</li>
+                <li>CSS3</li><li>Tailwind CSS</li>
+              </ul>
+            </div>
+            <div class="skill-group reveal">
+              <h3>Backend</h3>
+              <ul class="chips">
+                <li>Node.js</li><li>Express.js</li>
+                <li>RESTful APIs</li><li>JWT auth</li>
+              </ul>
+            </div>
+            <div class="skill-group reveal">
+              <h3>AI &amp; agents</h3>
+              <ul class="chips">
+                <li>Prompt engineering</li><li>LangChain</li><li>LangGraph</li>
+                <li>MCP</li><li>ReAct / TAO patterns</li>
+              </ul>
+            </div>
+            <div class="skill-group reveal">
+              <h3>Tools &amp; practices</h3>
+              <ul class="chips">
+                <li>Git &amp; GitHub</li><li>Agile / Scrum</li>
+                <li>Render</li><li>Base44</li><li>Claude Code</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!--
+          Tech-stack badge wall — the same shields.io badges used in the
+          GitHub profile README, so both surfaces tell one story.
+          Generate more at https://shields.io  ·  logos from https://simpleicons.org
+        -->
+        <details class="acc reveal" open>
+          <summary class="acc__summary">
+            <span class="acc__icon" aria-hidden="true">🧰</span>
+            <span class="acc__title">Tech stack badges</span>
+            <span class="acc__hint">the shields.io wall, same as my README</span>
+            <span class="acc__chevron" aria-hidden="true"></span>
+          </summary>
+          <div class="acc__body">
+            <div class="badges">
+              <img src="https://img.shields.io/badge/Python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54" alt="Python" loading="lazy">
+              <img src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E" alt="JavaScript" loading="lazy">
+              <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" loading="lazy">
+              <img src="https://img.shields.io/badge/SQL-4479A1?style=for-the-badge&logo=postgresql&logoColor=white" alt="SQL" loading="lazy">
+              <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React" loading="lazy">
+              <img src="https://img.shields.io/badge/Redux_Toolkit-764ABC?style=for-the-badge&logo=redux&logoColor=white" alt="Redux Toolkit" loading="lazy">
+              <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5" loading="lazy">
+              <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3" loading="lazy">
+              <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind CSS" loading="lazy">
+              <img src="https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white" alt="Node.js" loading="lazy">
+              <img src="https://img.shields.io/badge/Express.js-404D59?style=for-the-badge&logo=express&logoColor=white" alt="Express.js" loading="lazy">
+              <img src="https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white" alt="PostgreSQL" loading="lazy">
+              <img src="https://img.shields.io/badge/LangChain-1C3C3C?style=for-the-badge&logo=langchain&logoColor=white" alt="LangChain" loading="lazy">
+              <img src="https://img.shields.io/badge/LangGraph-1C3C3C?style=for-the-badge" alt="LangGraph" loading="lazy">
+              <img src="https://img.shields.io/badge/MCP-7c5cff?style=for-the-badge" alt="Model Context Protocol" loading="lazy">
+              <img src="https://img.shields.io/badge/Git-F05033?style=for-the-badge&logo=git&logoColor=white" alt="Git" loading="lazy">
+              <img src="https://img.shields.io/badge/Render-46E3B7?style=for-the-badge&logo=render&logoColor=white" alt="Render" loading="lazy">
+              <img src="https://img.shields.io/badge/Claude_Code-D97757?style=for-the-badge&logo=claude&logoColor=white" alt="Claude Code" loading="lazy">
+            </div>
+          </div>
+        </details>
+      </div>
+
+      <!-- Infinite marquee of tech names -->
+      <div class="marquee" aria-hidden="true">
+        <div class="marquee__track">
+          <span>Python</span><span>•</span><span>TypeScript</span><span>•</span><span>React</span><span>•</span>
+          <span>Node.js</span><span>•</span><span>PostgreSQL</span><span>•</span><span>LangChain</span><span>•</span>
+          <span>LangGraph</span><span>•</span><span>MCP</span><span>•</span><span>Git</span><span>•</span>
+          <span>Python</span><span>•</span><span>TypeScript</span><span>•</span><span>React</span><span>•</span>
+          <span>Node.js</span><span>•</span><span>PostgreSQL</span><span>•</span><span>LangChain</span><span>•</span>
+          <span>LangGraph</span><span>•</span><span>MCP</span><span>•</span><span>Git</span><span>•</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= RÉSUMÉ ======================= -->
+    <!--
+      Mirrors the collapsible <details> structure of the GitHub profile README:
+      Resume → Academics · Experience · Coding handles.
+      <details>/<summary> is native HTML — still zero JavaScript.
+    -->
+    <section id="resume" class="section">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="section__kicker">03 — Resume</p>
+          <h2 class="section__title">Education, experience &amp; handles</h2>
+          <p class="section__sub">
+            Everything below points the same direction: building for the web.
+            Click a heading to expand it.
+          </p>
+        </header>
+
+        <!-- ---------- ACADEMICS ---------- -->
+        <details class="acc reveal" open>
+          <summary class="acc__summary">
+            <span class="acc__icon" aria-hidden="true">🎓</span>
+            <span class="acc__title">Academics &amp; certificates</span>
+            <span class="acc__hint">5 entries</span>
+            <span class="acc__chevron" aria-hidden="true"></span>
+          </summary>
+          <div class="acc__body">
+
+            <div class="badges badges--tight">
+              <img src="https://img.shields.io/badge/Bootcamp-Developers_Institute-1877F2?style=for-the-badge" alt="Bootcamp: Developers Institute" loading="lazy">
+              <img src="https://img.shields.io/badge/M.Sc-Chemistry_(Weizmann)-7c5cff?style=for-the-badge" alt="M.Sc Chemistry, Weizmann Institute" loading="lazy">
+              <img src="https://img.shields.io/badge/B.Sc-Chemistry_(Top_10%25)-22d3ee?style=for-the-badge" alt="B.Sc Chemistry, Top 10 percent" loading="lazy">
+            </div>
+
+            <ol class="timeline">
+          <li class="timeline__item reveal">
+            <div class="timeline__dot" aria-hidden="true"></div>
+            <div class="timeline__card">
+              <div class="timeline__meta">
+                <span class="tag tag--accent">2026 — in progress</span>
+                <span class="tag">Intensive · 3 months</span>
+              </div>
+              <h3>Full-Stack &amp; AI Development Bootcamp</h3>
+              <p class="timeline__org">Developers Institute</p>
+              <p>
+                Intensive, project-based program covering Python, JavaScript/TypeScript,
+                React, Node.js/Express, PostgreSQL and agentic AI tooling (LangChain,
+                LangGraph, MCP), structured around weekly exercises and two hackathons.
+                Capstone project in progress.
+              </p>
+              <ul class="chips chips--sm">
+                <li>React</li><li>Node.js</li><li>PostgreSQL</li><li>LangChain</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="timeline__item reveal">
+            <div class="timeline__dot" aria-hidden="true"></div>
+            <div class="timeline__card">
+              <div class="timeline__meta">
+                <span class="tag tag--accent">2025</span>
+                <span class="tag">Certificate</span>
+              </div>
+              <h3>Product Management Certification</h3>
+              <p class="timeline__org">Technion</p>
+            </div>
+          </li>
+
+          <li class="timeline__item reveal">
+            <div class="timeline__dot" aria-hidden="true"></div>
+            <div class="timeline__card">
+              <div class="timeline__meta">
+                <span class="tag tag--accent">2025 — 2026</span>
+                <span class="tag">Executive program</span>
+              </div>
+              <h3>Executive Program for Senior Managers in Deep Tech Startups</h3>
+              <p class="timeline__org">Tel Aviv University</p>
+            </div>
+          </li>
+
+          <li class="timeline__item reveal">
+            <div class="timeline__dot" aria-hidden="true"></div>
+            <div class="timeline__card">
+              <div class="timeline__meta">
+                <span class="tag tag--accent">2012 — 2015</span>
+                <span class="tag">M.Sc.</span>
+              </div>
+              <h3>M.Sc. Chemistry — Materials &amp; Interfaces</h3>
+              <p class="timeline__org">Weizmann Institute of Science</p>
+            </div>
+          </li>
+
+          <li class="timeline__item reveal">
+            <div class="timeline__dot" aria-hidden="true"></div>
+            <div class="timeline__card">
+              <div class="timeline__meta">
+                <span class="tag tag--accent">2009 — 2012</span>
+                <span class="tag">B.Sc. · Top 10%</span>
+              </div>
+              <h3>B.Sc. Chemistry — Extended Track</h3>
+              <p class="timeline__org">Tel Aviv University</p>
+            </div>
+          </li>
+            </ol>
+          </div>
+        </details>
+
+        <!-- ---------- EXPERIENCE ---------- -->
+        <details class="acc reveal">
+          <summary class="acc__summary">
+            <span class="acc__icon" aria-hidden="true">💼</span>
+            <span class="acc__title">Experience</span>
+            <span class="acc__hint">prior to career transition</span>
+            <span class="acc__chevron" aria-hidden="true"></span>
+          </summary>
+          <div class="acc__body">
+            <p class="acc__note" style="margin-top: -0.4rem; margin-bottom: 1.2rem;">
+              Prior to retraining as a developer, I spent over a decade in R&amp;D
+              leadership roles across materials science, medical devices and
+              consumer-product companies. It's not dev experience — but running
+              projects from concept to production is where the project-management
+              muscle comes from.
+            </p>
+            <ol class="timeline">
+
+              <li class="timeline__item reveal">
+                <div class="timeline__dot" aria-hidden="true"></div>
+                <div class="timeline__card">
+                  <div class="timeline__meta">
+                    <span class="tag tag--accent">2020 — 2024</span>
+                    <span class="tag">Team of 10+</span>
+                  </div>
+                  <h3>Lead Scientist <span class="timeline__at">·</span> Daika Ltd</h3>
+                  <ul class="bullets">
+                    <li>Directed an R&amp;D team of <strong>10+</strong> developing sustainable wood composite materials and natural binder technologies.</li>
+                    <li>Managed chemistry, process engineering and QC labs end to end, from concept through pilot-scale production.</li>
+                  </ul>
+                  <ul class="chips chips--sm">
+                    <li>R&amp;D leadership</li><li>Materials science</li><li>QC</li>
+                  </ul>
+                </div>
+              </li>
+
+              <li class="timeline__item reveal">
+                <div class="timeline__dot" aria-hidden="true"></div>
+                <div class="timeline__card">
+                  <div class="timeline__meta">
+                    <span class="tag tag--accent">2018 — 2020</span>
+                    <span class="tag">Medical devices</span>
+                  </div>
+                  <h3>R&amp;D Senior Researcher &amp; Project Manager <span class="timeline__at">·</span> Nobio Ltd</h3>
+                  <ul class="bullets">
+                    <li>Developed dental composite materials and synthesized nanoparticles.</li>
+                    <li>Designed QC methods and production processes for a regulated medical-device product line.</li>
+                  </ul>
+                  <ul class="chips chips--sm">
+                    <li>Project management</li><li>Nanoparticle synthesis</li><li>QC</li>
+                  </ul>
+                </div>
+              </li>
+
+              <li class="timeline__item reveal">
+                <div class="timeline__dot" aria-hidden="true"></div>
+                <div class="timeline__card">
+                  <div class="timeline__meta">
+                    <span class="tag tag--accent">2015 — 2018</span>
+                    <span class="tag">Consumer products</span>
+                  </div>
+                  <h3>R&amp;D Researcher &amp; Lab Manager <span class="timeline__at">·</span> Luminera Ltd</h3>
+                  <ul class="bullets">
+                    <li>Formulated dermal filler materials and led analytical characterization programs.</li>
+                  </ul>
+                  <ul class="chips chips--sm">
+                    <li>Formulation</li><li>Analytical chemistry</li><li>Lab management</li>
+                  </ul>
+                </div>
+              </li>
+
+            </ol>
+          </div>
+        </details>
+
+        <!-- ---------- ONLINE PRESENCE ---------- -->
+        <details class="acc reveal">
+          <summary class="acc__summary">
+            <span class="acc__icon" aria-hidden="true">🔗</span>
+            <span class="acc__title">Online presence</span>
+            <span class="acc__hint">where to find me</span>
+            <span class="acc__chevron" aria-hidden="true"></span>
+          </summary>
+          <div class="acc__body">
+            <div class="handles">
+              <a class="handle" href="https://github.com/arielzin33-creator" target="_blank" rel="noopener noreferrer">
+                <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="" loading="lazy">
+                <span class="handle__name">GitHub</span>
+                <span class="handle__stat">@arielzin33-creator</span>
+              </a>
+              <a class="handle" href="https://www.linkedin.com/in/ariel-zinger-1067936b/" target="_blank" rel="noopener noreferrer">
+                <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="" loading="lazy">
+                <span class="handle__name">LinkedIn</span>
+                <span class="handle__stat">ariel-zinger</span>
+              </a>
+              <a class="handle" href="https://medium.com/@arielzin33" target="_blank" rel="noopener noreferrer">
+                <img src="https://img.shields.io/badge/Medium-000000?style=for-the-badge&logo=medium&logoColor=white" alt="" loading="lazy">
+                <span class="handle__name">Medium</span>
+                <span class="handle__stat">@arielzin33</span>
+              </a>
+              <a class="handle" href="https://www.datascienceportfol.io/arielzinger" target="_blank" rel="noopener noreferrer">
+                <img src="https://img.shields.io/badge/Portfolio-543DE0?style=for-the-badge&logo=About.me&logoColor=white" alt="" loading="lazy">
+                <span class="handle__name">Data Science Portfolio</span>
+                <span class="handle__stat">datascienceportfol.io</span>
+              </a>
+            </div>
+          </div>
+        </details>
+
+      </div>
+    </section>
+
+    <!-- ======================= PROJECTS ======================= -->
+    <section id="projects" class="section section--alt">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="section__kicker">04 — Work</p>
+          <h2 class="section__title">Projects</h2>
+          <p class="section__sub">
+            Click any card for the full story — why I built it, what broke, and what I learned.
+          </p>
+        </header>
+
+        <div class="projects">
+
+          <!--
+            ==== PROJECT CARD PATTERN ====
+            Card links to #project-N. The matching <article id="project-N">
+            below opens as a modal via the CSS :target selector. To add a
+            project, copy one card + one modal and bump the number.
+          -->
+
+          <a class="card reveal" href="#project-1">
+            <div class="card__media">
+              <img src="assets/projects/project-1.svg" alt="Screenshot of CirqHub" loading="lazy">
+              <span class="card__shine" aria-hidden="true"></span>
+            </div>
+            <div class="card__body">
+              <div class="card__meta">
+                <span class="tag tag--accent">Hackathon</span>
+                <span class="tag">AI-assisted build</span>
+              </div>
+              <h3 class="card__title">CirqHub</h3>
+              <p class="card__desc">
+                An AI-driven circular economy platform for physical market vendors —
+                surplus disposition, recipe generation and capacity forecasting.
+              </p>
+              <ul class="chips chips--sm">
+                <li>Base44</li><li>PostgreSQL</li><li>React</li><li>Express</li>
+              </ul>
+              <span class="card__cta">Read the case study <span aria-hidden="true">→</span></span>
+            </div>
+          </a>
+
+          <a class="card reveal" href="#project-2">
+            <div class="card__media">
+              <img src="assets/projects/project-2.svg" alt="Screenshot of biz2code" loading="lazy">
+              <span class="card__shine" aria-hidden="true"></span>
+            </div>
+            <div class="card__body">
+              <div class="card__meta">
+                <span class="tag tag--accent">Full-stack</span>
+                <span class="tag">Solo</span>
+              </div>
+              <h3 class="card__title">biz2code</h3>
+              <p class="card__desc">
+                A workflow system that guides software ideas through four
+                human-approved phases, generating an MRD, PRD and business plan.
+              </p>
+              <ul class="chips chips--sm">
+                <li>TypeScript</li><li>React</li><li>Node.js</li><li>PostgreSQL</li>
+              </ul>
+              <span class="card__cta">Read the case study <span aria-hidden="true">→</span></span>
+            </div>
+          </a>
+
+          <a class="card reveal" href="#project-3">
+            <div class="card__media">
+              <img src="assets/projects/project-3.svg" alt="Screenshot of Mythic Atlas" loading="lazy">
+              <span class="card__shine" aria-hidden="true"></span>
+            </div>
+            <div class="card__body">
+              <div class="card__meta">
+                <span class="tag tag--accent">Front-end</span>
+                <span class="tag">Solo</span>
+              </div>
+              <h3 class="card__title">Mythic Atlas</h3>
+              <p class="card__desc">
+                An interactive browser-based map overlaying real-world geography
+                with mythological kingdoms, gods and creatures.
+              </p>
+              <ul class="chips chips--sm">
+                <li>Leaflet.js</li><li>GeoJSON</li><li>Vanilla JS</li>
+              </ul>
+              <span class="card__cta">Read the case study <span aria-hidden="true">→</span></span>
+            </div>
+          </a>
+
+        </div>
+
+        <p class="projects__more reveal">
+          More experiments live on
+          <a href="https://github.com/arielzin33-creator?tab=repositories" target="_blank" rel="noopener noreferrer">my GitHub</a>.
+        </p>
+      </div>
+    </section>
+
+    <!-- ======================= STATS & ACTIVITY ======================= -->
+    <!--
+      These cards are live images rendered by third-party services — the same
+      ones used in the GitHub profile README. They're already pointed at
+      arielzin33-creator; if that ever changes, update every URL below.
+
+      Colours are passed as URL parameters so the cards match the site palette
+      in BOTH themes (transparent background + a mid-grey text colour that
+      reads on light and dark).
+    -->
+    <section id="stats" class="section">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="section__kicker">05 — Stats</p>
+          <h2 class="section__title">Activity &amp; contributions</h2>
+          <p class="section__sub">
+            Live from GitHub. Commits are not a personality, but they do show I turn up.
+          </p>
+        </header>
+
+        <div class="stats-grid">
+          <figure class="stat-card reveal">
+            <img loading="lazy"
+                 src="https://github-readme-stats.vercel.app/api?username=arielzin33-creator&show_icons=true&include_all_commits=true&count_private=true&hide_border=true&bg_color=00000000&title_color=7c5cff&icon_color=22d3ee&text_color=8b8b9e"
+                 alt="GitHub statistics card for arielzin33-creator">
+            <figcaption>Overall stats</figcaption>
+          </figure>
+
+          <figure class="stat-card reveal">
+            <!-- note: streak-stats.demolab.com is the maintained host
+                 (the old github-readme-streak-stats.herokuapp.com is retired) -->
+            <img loading="lazy"
+                 src="https://streak-stats.demolab.com?user=arielzin33-creator&hide_border=true&background=00000000&stroke=8b8b9e33&ring=7c5cff&fire=f472b6&currStreakLabel=22d3ee&sideLabels=8b8b9e&currStreakNum=8b8b9e&sideNums=8b8b9e&dates=8b8b9e"
+                 alt="Contribution streak card for arielzin33-creator">
+            <figcaption>Commit streak</figcaption>
+          </figure>
+
+          <figure class="stat-card reveal">
+            <img loading="lazy"
+                 src="https://github-readme-stats.vercel.app/api/top-langs/?username=arielzin33-creator&layout=compact&langs_count=8&hide_border=true&bg_color=00000000&title_color=7c5cff&text_color=8b8b9e"
+                 alt="Most-used languages for arielzin33-creator">
+            <figcaption>Most-used languages</figcaption>
+          </figure>
+
+          <figure class="stat-card stat-card--wide reveal">
+            <img loading="lazy"
+                 src="https://github-readme-activity-graph.vercel.app/graph?username=arielzin33-creator&hide_border=true&bg_color=00000000&color=8b8b9e&line=7c5cff&point=22d3ee&area=true&area_color=7c5cff"
+                 alt="Contribution activity graph for arielzin33-creator">
+            <figcaption>Contributions over the last year</figcaption>
+          </figure>
+        </div>
+
+        <!-- ---------- TROPHIES & SNAKE ---------- -->
+        <details class="acc reveal">
+          <summary class="acc__summary">
+            <span class="acc__icon" aria-hidden="true">🏆</span>
+            <span class="acc__title">Trophies &amp; contribution snake</span>
+            <span class="acc__hint">generated by GitHub Actions</span>
+            <span class="acc__chevron" aria-hidden="true"></span>
+          </summary>
+          <div class="acc__body">
+            <figure class="stat-card stat-card--wide">
+              <img loading="lazy"
+                   src="https://github-profile-trophy.vercel.app/?username=arielzin33-creator&theme=nord&no-frame=true&no-bg=true&column=7&margin-w=6"
+                   alt="GitHub profile trophies for arielzin33-creator">
+              <figcaption>Trophies</figcaption>
+            </figure>
+
+            <figure class="stat-card stat-card--wide">
+              <!-- Produced by the Platane/snk action — see profile-readme/.github/workflows/snake.yml -->
+              <img loading="lazy"
+                   src="https://raw.githubusercontent.com/arielzin33-creator/arielzin33-creator/output/snake.svg"
+                   alt="Snake eating the contribution graph — requires the snake GitHub Action">
+              <figcaption>The snake eats my contribution graph once a day</figcaption>
+            </figure>
+          </div>
+        </details>
+
+        <!-- ---------- RECENT ACTIVITY & MERGED PRs ---------- -->
+        <details class="acc reveal">
+          <summary class="acc__summary">
+            <span class="acc__icon" aria-hidden="true">🔀</span>
+            <span class="acc__title">Recent activity &amp; merged PRs</span>
+            <span class="acc__hint">auto-updated in my README</span>
+            <span class="acc__chevron" aria-hidden="true"></span>
+          </summary>
+          <div class="acc__body">
+            <!--
+              EDIT: the badge and list below are placeholders. Wire up
+              profile-readme/.github/workflows/activity.yml and the merged-PRs
+              action (see profile-readme/SETUP.md), then mirror the generated
+              content here.
+            -->
+            <div class="badges badges--tight">
+              <img src="https://img.shields.io/badge/Merged_PRs-set_up_the_action-7c5cff?style=for-the-badge" alt="Merged PR count — wire up the GitHub Action to populate this" loading="lazy">
+            </div>
+
+            <p class="acc__note">
+              This list populates automatically once the recent-activity GitHub
+              Action is wired up on my
+              <a href="https://github.com/arielzin33-creator" target="_blank" rel="noopener noreferrer">profile README</a>
+              — see <code>profile-readme/SETUP.md</code> for the setup.
+            </p>
+          </div>
+        </details>
+
+        <!-- ---------- FUN ---------- -->
+        <div class="fun reveal">
+          <figure class="stat-card">
+            <img loading="lazy" src="https://readme-jokes.vercel.app/api?theme=nord&hideBorder=true&bgColor=00000000&textColor=8b8b9e&qColor=7c5cff&aColor=22d3ee"
+                 alt="A random programming joke">
+            <figcaption>A joke, refreshed on every load</figcaption>
+          </figure>
+          <figure class="stat-card">
+            <img loading="lazy" src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=nord"
+                 alt="A random developer quote">
+            <figcaption>…and a quote to go with it</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= CONTACT ======================= -->
+    <section id="contact" class="section section--alt">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="section__kicker">06 — Contact</p>
+          <h2 class="section__title">Let's build something</h2>
+          <p class="section__sub">
+            Hiring, freelancing, or just want to argue about tabs vs spaces? The form works.
+          </p>
+        </header>
+
+        <div class="contact">
+          <!--
+            EDIT: the form has no backend of its own (GitHub Pages is static).
+            Easiest option — create a free form at https://formspree.io and paste
+            your endpoint into action=. Alternatives: Getform, Web3Forms, Netlify Forms.
+          -->
+          <form class="form reveal" action="https://formspree.io/f/mdenldok" method="POST">
+            <div class="field">
+              <input type="text" id="name" name="name" placeholder=" " required autocomplete="name">
+              <label for="name">Your name</label>
+            </div>
+
+            <div class="field">
+              <input type="email" id="email" name="email" placeholder=" " required autocomplete="email">
+              <label for="email">Email address</label>
+            </div>
+
+            <div class="field">
+              <input type="text" id="subject" name="subject" placeholder=" " required>
+              <label for="subject">Subject</label>
+            </div>
+
+            <div class="field">
+              <textarea id="message" name="message" rows="5" placeholder=" " required></textarea>
+              <label for="message">Message</label>
+            </div>
+
+            <!-- Simple spam honeypot: bots fill it, humans never see it -->
+            <input type="text" name="_gotcha" class="honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+            <button type="submit" class="btn btn--primary btn--full">
+              Send message
+              <svg viewBox="0 0 24 24" class="icon" aria-hidden="true">
+                <path d="m4 12 16-8-6 16-2-6-8-2Z"/>
+              </svg>
+            </button>
+            <p class="form__note">I usually reply within a day or two.</p>
+          </form>
+
+          <aside class="contact__aside reveal">
+            <div class="contact__item">
+              <span class="contact__label">Email</span>
+              <a href="mailto:arielzin33@gmail.com">arielzin33@gmail.com</a>
+            </div>
+            <div class="contact__item">
+              <span class="contact__label">Location</span>
+              <span>Holon, Israel · open to remote</span>
+            </div>
+            <div class="contact__item">
+              <span class="contact__label">GitHub</span>
+              <a href="https://github.com/arielzin33-creator" target="_blank" rel="noopener noreferrer">@arielzin33-creator</a>
+            </div>
+            <div class="contact__item">
+              <span class="contact__label">LinkedIn</span>
+              <a href="https://www.linkedin.com/in/ariel-zinger-1067936b/" target="_blank" rel="noopener noreferrer">ariel-zinger</a>
+            </div>
+            <div class="contact__item">
+              <span class="contact__label">Medium</span>
+              <a href="https://medium.com/@arielzin33" target="_blank" rel="noopener noreferrer">@arielzin33</a>
+            </div>
+            <a class="btn btn--ghost btn--full" href="assets/resume.pdf" download>Download resume (PDF)</a>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ======================= FOOTER ======================= -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p>© <span>2026</span> Ariel Zinger — built with too much CSS and no JavaScript.</p>
+      <ul class="footer__links">
+        <li><a href="https://github.com/arielzin33-creator" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/ariel-zinger-1067936b/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+        <li><a href="#hero">Back to top ↑</a></li>
+      </ul>
+    </div>
+  </footer>
+
+
+  <!--
+    ==========================================================================
+    PROJECT MODALS
+    Hidden until their id is the URL fragment (:target). Placed last in the
+    DOM so screen readers reach the page content first.
+    ==========================================================================
+  -->
+
+  <!-- ---------- PROJECT 1 ---------- -->
+  <article class="modal" id="project-1" aria-labelledby="p1-title">
+    <a href="#projects" class="modal__backdrop" aria-label="Close"></a>
+    <div class="modal__panel" role="dialog" aria-modal="true" aria-labelledby="p1-title">
+      <a href="#projects" class="modal__close" aria-label="Close project details">×</a>
+
+      <header class="modal__head">
+        <div class="card__meta">
+          <span class="tag tag--accent">Hackathon</span>
+          <span class="tag">AI-assisted build</span>
+          <span class="tag">2026</span>
+        </div>
+        <h2 id="p1-title">CirqHub</h2>
+        <p class="modal__lede">
+          An AI-driven circular economy platform for physical market vendors, built
+          with Base44 as an AI-assisted development platform.
+        </p>
+      </header>
+
+      <img class="modal__hero" src="assets/projects/project-1.svg" alt="CirqHub surplus-management dashboard">
+
+      <div class="modal__grid">
+        <section class="qa">
+          <h3><span class="qa__num">01</span> Why I built it</h3>
+          <p>
+            Physical market vendors need a fast way to decide what happens to unsold
+            surplus before it goes to waste. I co-designed a platform that tackles that
+            in real time: the item lifecycle and REST API surface, food-safety check
+            constraints, and two AI decision engines — one ranking surplus disposition
+            (Donate / Barter / Reuse) and generating recipes, the other forecasting
+            capacity to drive staffing and layout planning.
+          </p>
+        </section>
+
+        <section class="qa">
+          <h3><span class="qa__num">02</span> Tools &amp; time</h3>
+          <p>
+            Built on <strong>Base44</strong> as the AI-assisted development platform,
+            with a PostgreSQL schema, an Express API, and an offline-first React front
+            end — a custom offline-queue hook with local caching and background
+            re-sync. <!-- EDIT: how long did the hackathon run / how many hours total? --></p>
+        </section>
+
+        <section class="qa">
+          <h3><span class="qa__num">03</span> What challenged me</h3>
+          <p>
+            Directing AI-assisted implementation without accepting first-pass output —
+            working iteratively on the generated PostgreSQL schema, API and offline
+            sync logic rather than shipping whatever came out first. On the QA side:
+            verifying disposition-state transitions, safety-constraint enforcement,
+            and offline/online sync behaviour across both the vendor and operator
+            surfaces, then code-reviewing the implementation for correctness and
+            adherence to spec before sign-off.
+          </p>
+        </section>
+
+        <section class="qa">
+          <h3><span class="qa__num">04</span> What I learned</h3>
+          <p>
+            How to direct AI-assisted development against a clear specification —
+            treating the generated code as a first draft to review and QA, not a
+            finished product. Co-designing the two AI decision engines also meant
+            translating a fuzzy real-world problem (what to do with surplus food) into
+            constraints an engine could actually rank against.
+          </p>
+        </section>
+      </div>
+
+      <h3 class="modal__subhead">Screenshots</h3>
+      <div class="shots">
+        <!-- EDIT: swap in real screenshots of the vendor / operator surfaces -->
+        <img src="assets/projects/project-1.svg" alt="Vendor surplus-disposition view" loading="lazy">
+        <img src="assets/projects/project-2.svg" alt="Operator capacity-forecast dashboard" loading="lazy">
+        <img src="assets/projects/project-3.svg" alt="Recipe-generation flow" loading="lazy">
+      </div>
+
+      <footer class="modal__foot">
+        <!-- EDIT: link to the actual CirqHub repo if it's separate from your profile -->
+        <a class="btn btn--primary" href="https://github.com/arielzin33-creator" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" class="icon icon--fill" aria-hidden="true"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.6v-2c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.8-1.6-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.4 11.4 0 0 1 6 0C17.7 4.7 18.7 5 18.7 5c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.5-2.7 5.5-5.3 5.8.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.7 18.3.5 12 .5Z"/></svg>
+          Documentation
+        </a>
+        <!-- EDIT: add the live demo URL if CirqHub is deployed anywhere -->
+      </footer>
+    </div>
+  </article>
+
+  <!-- ---------- PROJECT 2 ---------- -->
+  <article class="modal" id="project-2" aria-labelledby="p2-title">
+    <a href="#projects" class="modal__backdrop" aria-label="Close"></a>
+    <div class="modal__panel" role="dialog" aria-modal="true" aria-labelledby="p2-title">
+      <a href="#projects" class="modal__close" aria-label="Close project details">×</a>
+
+      <header class="modal__head">
+        <div class="card__meta">
+          <span class="tag tag--accent">Full-stack</span>
+          <span class="tag">Solo</span>
+        </div>
+        <h2 id="p2-title">biz2code</h2>
+        <p class="modal__lede">
+          A workflow system that guides software ideas through four human-approved
+          phases, generating a Market Requirements Document, Product Requirements
+          Document, and Business Plan.
+        </p>
+      </header>
+
+      <img class="modal__hero" src="assets/projects/project-2.svg" alt="biz2code phase workflow">
+
+      <div class="modal__grid">
+        <!-- EDIT: drafted from the project's stated purpose and tech stack — replace with your own account when you have a minute -->
+        <section class="qa">
+          <h3><span class="qa__num">01</span> Why I built it</h3>
+          <p>
+            Jumping straight from "idea" to "code" is exactly how AI-assisted tools
+            produce confident, wrong output — there's no spec to hold the generation
+            accountable to. biz2code forces the opposite order: an idea has to clear
+            a Market Requirements Document, then a Product Requirements Document,
+            then a Business Plan, with a human approving each phase before the next
+            one starts. It's the spec-to-code discipline from my bootcamp work,
+            turned into a tool instead of a habit.
+          </p>
+        </section>
+
+        <section class="qa">
+          <h3><span class="qa__num">02</span> Tools &amp; time</h3>
+          <p>
+            TypeScript and React on the front end, Node.js/Express and PostgreSQL on
+            the back end, with Python for parts of the document-generation pipeline.
+            A solo, focused build outside bootcamp hours.
+          </p>
+        </section>
+
+        <section class="qa">
+          <h3><span class="qa__num">03</span> What challenged me</h3>
+          <p>
+            Designing the phase-gate logic itself — each stage needed explicit human
+            approval before the next could generate, which meant the state machine
+            had to be strict about what "approved" means and prevent a rejected
+            phase from silently leaking into later documents.
+          </p>
+        </section>
+
+        <section class="qa">
+          <h3><span class="qa__num">04</span> What I learned</h3>
+          <p>
+            That structuring the spec is most of the work — once the MRD/PRD/Business
+            Plan pipeline was solid, generating each document was the easy part. It's
+            the same lesson as directing AI-assisted development generally: the
+            quality of what comes out depends entirely on how clearly the input was
+            defined.
+          </p>
+        </section>
+      </div>
+
+      <h3 class="modal__subhead">Screenshots</h3>
+      <div class="shots">
+        <!-- EDIT: swap in real screenshots -->
+        <img src="assets/projects/project-2.svg" alt="biz2code phase overview" loading="lazy">
+        <img src="assets/projects/project-3.svg" alt="Generated requirements document" loading="lazy">
+        <img src="assets/projects/project-1.svg" alt="Business plan output" loading="lazy">
+      </div>
+
+      <footer class="modal__foot">
+        <a class="btn btn--primary" href="https://github.com/arielzin33-creator" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" class="icon icon--fill" aria-hidden="true"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.6v-2c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.8-1.6-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.4 11.4 0 0 1 6 0C17.7 4.7 18.7 5 18.7 5c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.5-2.7 5.5-5.3 5.8.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.7 18.3.5 12 .5Z"/></svg>
+          View on GitHub
+        </a>
+      </footer>
+    </div>
+  </article>
+
+  <!-- ---------- PROJECT 3 ---------- -->
+  <article class="modal" id="project-3" aria-labelledby="p3-title">
+    <a href="#projects" class="modal__backdrop" aria-label="Close"></a>
+    <div class="modal__panel" role="dialog" aria-modal="true" aria-labelledby="p3-title">
+      <a href="#projects" class="modal__close" aria-label="Close project details">×</a>
+
+      <header class="modal__head">
+        <div class="card__meta">
+          <span class="tag tag--accent">Front-end</span>
+          <span class="tag">Solo</span>
+        </div>
+        <h2 id="p3-title">Mythic Atlas</h2>
+        <p class="modal__lede">
+          An interactive browser-based map overlaying real-world geography with
+          mythological kingdoms, gods and creatures.
+        </p>
+      </header>
+
+      <img class="modal__hero" src="assets/projects/project-3.svg" alt="Mythic Atlas map view">
+
+      <div class="modal__grid">
+        <!-- EDIT: drafted from the project's stated purpose and tech stack — replace with your own account when you have a minute -->
+        <section class="qa">
+          <h3><span class="qa__num">01</span> Why I built it</h3>
+          <p>
+            A palette-cleanser from the AI-assisted projects — something with no
+            backend, no agent, just a map and an idea: what if the world's mythology
+            lived at the real coordinates people place it at? Olympus over Greece,
+            Asgard somewhere suitably northern. It's a portfolio piece that proves
+            I can build a polished front-end experience from scratch, no framework
+            doing the heavy lifting.
+          </p>
+        </section>
+
+        <section class="qa">
+          <h3><span class="qa__num">02</span> Tools &amp; time</h3>
+          <p>
+            HTML5, CSS3 and vanilla JavaScript, with Leaflet.js driving the map and
+            Leaflet.markercluster keeping dozens of kingdom/god/creature markers
+            readable at every zoom level. Mythological locations and metadata are
+            stored as GeoJSON.
+          </p>
+        </section>
+
+        <section class="qa">
+          <h3><span class="qa__num">03</span> What challenged me</h3>
+          <p>
+            Marker density. With enough kingdoms, gods and creatures placed on one
+            map, overlapping pins turned into visual noise fast — which is exactly
+            what Leaflet.markercluster is for, but tuning cluster radius and zoom
+            thresholds so it clustered usefully instead of just hiding things took
+            real iteration.
+          </p>
+        </section>
+
+        <section class="qa">
+          <h3><span class="qa__num">04</span> What I learned</h3>
+          <p>
+            How far vanilla JavaScript and a good mapping library go without React
+            or a build step in the way. After a stretch of AI-directed, spec-driven
+            work, writing every line of the interaction logic myself was a useful
+            reset on the fundamentals.
+          </p>
+        </section>
+      </div>
+
+      <h3 class="modal__subhead">Screenshots</h3>
+      <div class="shots">
+        <!-- EDIT: swap in real screenshots -->
+        <img src="assets/projects/project-3.svg" alt="Mythic Atlas overview map" loading="lazy">
+        <img src="assets/projects/project-1.svg" alt="Kingdom detail popup" loading="lazy">
+        <img src="assets/projects/project-2.svg" alt="Creature marker cluster" loading="lazy">
+      </div>
+
+      <footer class="modal__foot">
+        <a class="btn btn--primary" href="https://github.com/arielzin33-creator" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" class="icon icon--fill" aria-hidden="true"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.6v-2c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.8-1.6-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.4 11.4 0 0 1 6 0C17.7 4.7 18.7 5 18.7 5c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.5-2.7 5.5-5.3 5.8.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.7 18.3.5 12 .5Z"/></svg>
+          View on GitHub
+        </a>
+      </footer>
+    </div>
+  </article>
+
+</body>
+</html>
