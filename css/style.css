@@ -1018,6 +1018,11 @@ code {
 }
 .card__cta span { transition: transform 0.3s var(--ease); }
 .card:hover .card__cta span { transform: translateX(6px); }
+.card__note {
+  font-size: var(--fs-xs, 0.78rem);
+  color: var(--text-muted);
+  margin-top: -0.3rem;
+}
 
 .projects__more {
   margin-top: 2.5rem;
